@@ -1,42 +1,47 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .para,
 .small-para {
-  color: hsl(0, 0%, 0%);
-  font-weight: 800;
+    color: hsl(0, 0%, 0%);
+    font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
+/*The difference between this and the solution implementation is they used a p tag to increase specificity whereas I used .para*/
+.para.small-para {
+    font-size: 14px;
+    font-weight: 800;
 }
 
 .para {
-  font-size: 22px;
+    font-size: 22px;
 }
 
-.confirm {
-  background: green;
-  color: white;
-  font-weight: bold;
-} 
+/*Both the solution and I implemented this the same way*/
+#confirm-button {
+    background: green;
+    color: white;
+    font-weight: bold;
+}
 
+/*untouched in both*/
 .button {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
 }
 
-.child {
-  color: rgb(0, 0, 0);
-  font-weight: 800;
-  font-size: 14px;
+/*agreed*/
+.text.child {
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-size: 14px;
 }
 
+/*untouched in both*/
 div.text {
-  color: rgb(0, 0, 0);
-  font-size: 22px;
-  font-weight: 100;
+    color: rgb(0, 0, 0);
+    font-size: 22px;
+    font-weight: 100;
 }
