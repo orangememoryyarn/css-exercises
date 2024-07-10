@@ -1,48 +1,84 @@
-/* this is some magical font-importing.  
+/* this is some magical font-importing.
 you'll learn about it later. */
-@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap");
 
 body {
-  margin: 0;
-  background: #eee;
-  font-family: Besley, serif;
+    /*I don't know why the body has a default margin but ok*/
+    margin: 0;
+    background: #eee;
+    font-family: Besley, serif;
 }
 
 .header {
-  background: white;
-  border-bottom: 1px solid #ddd;
-  box-shadow: 0 0 8px rgba(0,0,0,.1);
+    /*default styles*/
+    background: white;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+
+    /*flex styling*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    /*space between the edges and the body*/
+    padding: 8px;
+
+    /*Not really necessary but y not to be safe*/
+    margin: 0px;
 }
 
+/*untouched by me*/
 .profile-image {
-  background: rebeccapurple;
-  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
+    background: rebeccapurple;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
 }
 
+/*untouched by me*/
 .logo {
-  color: rebeccapurple;
-  font-size: 32px;
-  font-weight: 900;
-  font-style: italic;
+    color: rebeccapurple;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
 }
 
+/*untouched by me*/
 button {
-  border: none;
-  border-radius: 8px;
-  background: rebeccapurple;
-  color: white;
-  padding: 8px 24px;
+    border: none;
+    border-radius: 8px;
+    background: rebeccapurple;
+    color: white;
+    padding: 8px 24px;
 }
 
+/*untouched by me*/
 a {
-  /* this removes the line under our links */
-  text-decoration: none;
-  color: rebeccapurple;
+    /* this removes the line under our links */
+    text-decoration: none;
+    color: rebeccapurple;
 }
 
+/*list rules*/
 ul {
-  list-style-type: none;
+    list-style-type: none;
+
+    /*my flexy stuff*/
+    display: flex;
+    flex-direction: row; /*implicit explicit and all that*/
+    gap: 16px;
+    justify-content: center; /*This does nothing to the styles*/
+
+    /*making the implicit explicit*/
+    margin: 0px; /*I think lists have a slight top-bottom margin built-in*/
+    padding: 0px; /*lists 100% have a padding left (I nullify that here)*/
+}
+
+/*my nested flexboxes*/
+.nest {
+    display: flex;
+    align-items: center;
+    gap: 16px;
 }
